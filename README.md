@@ -37,3 +37,8 @@ A comprehensive, secure, and responsive web-based system designed for schools an
 - Feedback & complaints management
 - Fee and salary management
 - Responsive design (Mobile & Desktop)
+
+- ## 🛠️ Support
+
+If you face any issues while running the application or need help with setup, feel free to email me at:  
+**📩 ganesh.vullingala@gmail.com**
