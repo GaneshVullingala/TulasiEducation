@@ -42,3 +42,14 @@ A comprehensive, secure, and responsive web-based system designed for schools an
 
 If you face any issues while running the application or need help with setup, feel free to email me at:  
 **📩 ganesh.vullingala@gmail.com**
+
+## 📄 License
+
+This project is proprietary and intended for deployment under paid license terms. Contact the developer for usage permissions.
+
+<img width="1872" height="873" alt="image" src="https://github.com/user-attachments/assets/c8a3894f-e8b8-4e1e-9c1d-07d6d00d6c59" />
+
+<img width="1872" height="866" alt="image" src="https://github.com/user-attachments/assets/9344726d-3613-4fb6-9f24-a119342cf81a" />
+
+<img width="1862" height="863" alt="image" src="https://github.com/user-attachments/assets/944b6612-be2e-4825-87b3-9c271cdfeed6" />
+
