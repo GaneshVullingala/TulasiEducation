@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeMaster.master.cs" Inherits="TulasiEducation.Master.HomeMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Tulasi Educational Instituations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicon -->
+    <link href="SiteImages/logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../css/global.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .navbar, .sidebar {
+            background-color: #343a40;
+            color: white;
+        }
+
+        .navbar {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .toggle-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hide sidebar */
+            width: 250px;
+            height: 100vh;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .form-floating {
+                z-index: 1;
+            }
+
+            .sidebar {
+                z-index: 1050;
+            }
+
+            .toggle-icon {
+                position: relative; /* or absolute/fixed if needed */
+                z-index: 1100; /* higher than sidebar */
+            }
+
+            #header {
+                position: relative;
+                z-index: 1100;
+            }
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+        }
+
+            .sidebar a:hover {
+                background-color: #495057;
+            }
+
+        .sidebar.show {
+            left: 0;
+        }
+
+        .content {
+            margin-top: 30px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
+        @media (min-width: 768px) {
+            .content.shift {
+                margin-left: 250px;
+            }
+        }
+    </style>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            const content = document.getElementById("form1");
+
+            sidebar.classList.toggle("show");
+            content.classList.toggle("shift");
+        }
+    </script>
+
+
+</head>
+<body>
+    <div id="header">
+        <!-- Top Navbar -->
+        <div class="navbar">
+            <div class="position-relative z-3">
+                <span class="toggle-icon" onclick="toggleSidebar()">☰</span>
+                <a href="Home.aspx"><img src="../SiteImages/logo.png"/ style="height: 45px; margin-bottom: 10px;"></a>
+            </div>
+            <span><strong>Hi, Admin</strong></span>
+        </div>
+        <!-- Hidden Sidebar -->
+        <div class="sidebar position-fixed z-2" id="sidebar">
+            <a href="Home.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-home text-light"></i></span>Home</a>
+            <a href="AddStudent.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-user-plus text-light"></i></span>Add Student</a>
+            <a href="AddTeacher.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-address-card text-light"></i></span>Add Teacher</a>
+            <a href="studentinfo.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-users text-light"></i></span>Students Info</a>
+            <a href="Teacherinfo.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-user text-light"></i></span>Teachers Info</a>
+            <a href="SClassActivity.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-chart-line text-light"></i></span>Class Activity</a>
+            <a href="TimeTable.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-calendar text-light"></i></span>Time Table</a>
+            <a href="Attendence.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-calendar-day text-light"></i></span>Attandance</a>
+            <a href="Notification.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-bell text-light"></i></span>Notifications</a>
+            <a href="Feedback.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-comment text-light"></i></span>Feedback</a>
+            <a href="Comingsoon.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-money-bill text-light"></i></span>Fee</a>
+            <a href="Comingsoon.aspx"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-coins text-light"></i></span>Staff Salary</a>
+            <a href="<%= ResolveUrl("~/Logout.aspx") %>"><span style="margin-right: 10px;"><i class="fa fa-1x fa-solid fa-question text-light"></i></span>Logout</a>
+        </div>
+    </div>
+    <form id="form1" runat="server" class="content">
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
